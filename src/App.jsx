@@ -1,4 +1,5 @@
 import './App.css';
+import { Cart } from './components/cart/Cart';
 import { Student } from './components/comp-param/Student';
 import { User } from './components/comp-param/User';
 import { Item } from './components/component/Item';
@@ -12,6 +13,9 @@ import { Todo } from './components/todo/Todo';
 function App() {
   return (
     <div className="App">
+      <h2>Props from Child to Parent</h2>
+      <Cart />
+
       <h2>useState() hooks'as</h2>
       <Todo />
       <Counter />
