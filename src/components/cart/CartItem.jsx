@@ -2,23 +2,20 @@ import { useState } from 'react';
 import style from './Cart.module.css';
 
 export function CartItem(props) {
-    console.log(props);
-
     const { title, skambutis } = props;
-
     const [count, setCount] = useState(0);
 
     function updateMinus() {
         if (count > 0) {
             setCount(count - 1);
-            skambutis(-1);
+            skambutis(-1, title);
         }
     }
 
     function updatePlus() {
         if (count < 10) {
             setCount(count + 1);
-            skambutis(1);
+            skambutis(1, title);
         }
     }
 

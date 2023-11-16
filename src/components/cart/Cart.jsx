@@ -5,8 +5,13 @@ import { CartItem } from './CartItem';
 export function Cart() {
     const [count, setCount] = useState(0);
 
-    function telefonas(diff) {
+    function telefonas(diff, cartItemTitle) {
         setCount(count + diff);
+        if (diff === -1) {
+            console.log(`Is krepselio isimta: ${cartItemTitle}`);
+        } else {
+            console.log(`I krepseli ideta: ${cartItemTitle}`);
+        }
     }
 
     return (
